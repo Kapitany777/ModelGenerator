@@ -13,7 +13,14 @@ namespace ModelGenerator
         {
             Pojo pojo = new Pojo("hu.braincluster.test.models", "Raktar");
 
-            Console.WriteLine(pojo.GetSourceCode());
+            pojo
+                .AddDataField(new DataField(DataTypes.String, "raktarKod"))
+                .AddDataField(new DataField(DataTypes.String, "raktarNev"))
+                .AddDataField(new DataField(DataTypes.Integer, "kapacitas"));
+
+            PojoGenerator pojoGenerator = new PojoGenerator(pojo);
+
+            Console.WriteLine(pojoGenerator.GetSourceCode());
         }
     }
 }

@@ -8,29 +8,27 @@ namespace BrainCluster.PojoLibrary
 {
     public class Pojo
     {
-        public string PackageName { get; set; }
+        #region Properties
+        public string PackageName { get; }
 
-        public string ClassName { get; set; }
+        public string ClassName { get; }
+
+        public List<DataField> DataFields { get; }
+        #endregion
 
         public Pojo(string packageName, string className)
         {
             this.PackageName = packageName;
             this.ClassName = className;
+
+            DataFields = new List<DataField>();
         }
 
-
-        public string GetSourceCode()
+        public Pojo AddDataField(DataField dataField)
         {
-            StringBuilder source = new StringBuilder();
+            DataFields.Add(dataField);
 
-            source.AppendTwoLines($"package {this.PackageName};");
-            source.AppendTwoLines("import com.google.gson.annotations.SerializedName;");
-            source.AppendLine($"public class {this.ClassName}");
-            source.AppendLine("{");
-
-            source.AppendLine("}");
-
-            return source.ToString();
+            return this;
         }
     }
 }

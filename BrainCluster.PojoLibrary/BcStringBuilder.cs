@@ -13,5 +13,10 @@ namespace BrainCluster.PojoLibrary
             stringBuilder.AppendLine(line);
             stringBuilder.AppendLine();
         }
+
+        public static void AppendLineWithTabs(this StringBuilder stringBuilder, string line, int tabSize)
+        {
+            stringBuilder.AppendLine($"{new string(' ', tabSize)}{line}");
+        }
     }
 }

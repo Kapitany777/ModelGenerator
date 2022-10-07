@@ -41,7 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BcStringBuilder.cs" />
+    <Compile Include="DataField.cs" />
+    <Compile Include="DataTypes.cs" />
     <Compile Include="Pojo.cs" />
+    <Compile Include="PojoGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
