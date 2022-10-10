@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BrainCluster.PojoLibrary
+namespace BrainCluster.CommonLibrary
 {
     public enum DataTypes
-    {        
+    {
         Boolean,
         Double,
         Integer,

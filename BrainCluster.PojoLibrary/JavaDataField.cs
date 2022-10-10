@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BrainCluster.CommonLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BrainCluster.PojoLibrary
 {
-    public class DataField
+    public class JavaDataField
     {
         public DataTypes DataType { get; set; }
 
@@ -14,31 +15,11 @@ namespace BrainCluster.PojoLibrary
 
         public string SerializedName => $"@SerializedName(\"{this.FieldName}\")";
 
-        public string Variable
-        {
-            get
-            {
-                return $"private {DataTypeToString(this.DataType)} {this.FieldName};";
-            }
-        }
+        public string DataTypeName => DataTypeToString(this.DataType);
 
-        public string Getter
-        {
-            get
-            {
-                return "";
-            }
-        }
+        public string Variable => $"private {DataTypeToString(this.DataType)} {this.FieldName};";
 
-        public string Setter
-        {
-            get
-            {
-                return "";
-            }
-        }
-
-        public DataField(DataTypes dataType, string fieldName)
+        public JavaDataField(DataTypes dataType, string fieldName)
         {
             this.DataType = dataType;
             this.FieldName = fieldName;

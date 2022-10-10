@@ -13,7 +13,7 @@ namespace BrainCluster.PojoLibrary
 
         public string ClassName { get; }
 
-        public List<DataField> DataFields { get; }
+        public List<JavaDataField> DataFields { get; }
         #endregion
 
         public Pojo(string packageName, string className)
@@ -21,10 +21,10 @@ namespace BrainCluster.PojoLibrary
             this.PackageName = packageName;
             this.ClassName = className;
 
-            DataFields = new List<DataField>();
+            DataFields = new List<JavaDataField>();
         }
 
-        public Pojo AddDataField(DataField dataField)
+        public Pojo AddDataField(JavaDataField dataField)
         {
             DataFields.Add(dataField);
 

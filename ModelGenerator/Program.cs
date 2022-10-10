@@ -1,4 +1,5 @@
-﻿using BrainCluster.PojoLibrary;
+﻿using BrainCluster.CommonLibrary;
+using BrainCluster.PojoLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +12,14 @@ namespace ModelGenerator
     {
         static void Main(string[] args)
         {
-            Pojo pojo = new Pojo("hu.braincluster.test.models", "Raktar");
+            var pojo = new Pojo("hu.braincluster.test.models", "Warehouse");
 
             pojo
-                .AddDataField(new DataField(DataTypes.String, "raktarKod"))
-                .AddDataField(new DataField(DataTypes.String, "raktarNev"))
-                .AddDataField(new DataField(DataTypes.Integer, "kapacitas"));
+                .AddDataField(new JavaDataField(DataTypes.String, "warehouseCode"))
+                .AddDataField(new JavaDataField(DataTypes.String, "warehouseName"))
+                .AddDataField(new JavaDataField(DataTypes.Integer, "capacity"));
 
-            PojoGenerator pojoGenerator = new PojoGenerator(pojo);
+            var pojoGenerator = new PojoGenerator(pojo);
 
             Console.WriteLine(pojoGenerator.GetSourceCode());
         }

@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BrainCluster.CommonLibrary\BrainCluster.CommonLibrary.csproj">
+      <Project>{31D047A4-A669-4109-AA11-2C2442A32CBF}</Project>
+      <Name>BrainCluster.CommonLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BrainCluster.PojoLibrary\BrainCluster.PojoLibrary.csproj">
       <Project>{ae872c97-6c37-4ff2-9c45-42b0171c3b88}</Project>
       <Name>BrainCluster.PojoLibrary</Name>

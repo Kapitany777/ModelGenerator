@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BrainCluster.PojoLibrary
+namespace BrainCluster.TextUtilsLibrary
 {
     public static class BcStringBuilder
     {
