@@ -9,6 +9,7 @@ namespace BrainCluster.PojoLibrary
     public class Pojo
     {
         #region Properties
+        // TODO: javadoc kezelése
         public string PackageName { get; }
 
         public string ClassName { get; }

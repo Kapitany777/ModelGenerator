@@ -50,6 +50,10 @@
       <Project>{31D047A4-A669-4109-AA11-2C2442A32CBF}</Project>
       <Name>BrainCluster.CommonLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BrainCluster.TextUtils\BrainCluster.TextUtilsLibrary.csproj">
+      <Project>{1938E519-5512-4076-A108-C64A8DB77079}</Project>
+      <Name>BrainCluster.TextUtilsLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

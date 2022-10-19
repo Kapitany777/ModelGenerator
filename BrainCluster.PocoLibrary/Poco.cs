@@ -13,6 +13,8 @@ namespace BrainCluster.PocoLibrary
 
         public string ClassName { get; }
 
+        public string Summary { get; set; }
+
         public List<CsharpDataField> DataFields { get; }
         #endregion
 
@@ -22,6 +24,12 @@ namespace BrainCluster.PocoLibrary
             this.ClassName = className;
 
             DataFields = new List<CsharpDataField>();
+        }
+
+        public Poco(string namespaceName, string className, string summary)
+            : this(namespaceName, className)
+        {
+            this.Summary = summary;
         }
 
         public Poco AddDataField(CsharpDataField dataField)

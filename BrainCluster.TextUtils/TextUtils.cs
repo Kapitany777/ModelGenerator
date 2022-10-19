@@ -8,6 +8,16 @@ namespace BrainCluster.TextUtilsLibrary
 {
     public static class TextUtils
     {
+        public static string LowercaseFirst(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+            {
+                return string.Empty;
+            }
+
+            return char.ToLower(text[0]) + text.Substring(1);
+        }
+
         public static string UppercaseFirst(string text)
         {
             if (string.IsNullOrEmpty(text))

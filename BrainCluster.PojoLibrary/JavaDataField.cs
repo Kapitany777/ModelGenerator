@@ -1,4 +1,5 @@
 ﻿using BrainCluster.CommonLibrary;
+using BrainCluster.TextUtilsLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace BrainCluster.PojoLibrary
         public JavaDataField(DataTypes dataType, string fieldName)
         {
             this.DataType = dataType;
-            this.FieldName = fieldName;
+            this.FieldName = TextUtils.LowercaseFirst(fieldName);
         }
 
         private string DataTypeToString(DataTypes dataType)

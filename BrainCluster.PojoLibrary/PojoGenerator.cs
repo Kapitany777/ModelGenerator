@@ -46,7 +46,7 @@ namespace BrainCluster.PojoLibrary
 
         private void AddGetter(StringBuilder source, JavaDataField dataField)
         {
-            source.AppendLineWithTabs($"public {dataField.DataTypeName} get{TextUtils.UppercaseFirst(dataField.FieldName)}", this.TabSize);
+            source.AppendLineWithTabs($"public {dataField.DataTypeName} get{TextUtils.UppercaseFirst(dataField.FieldName)}()", this.TabSize);
             source.AppendLineWithTabs("{", this.TabSize);
             source.AppendLineWithTabs($"return {dataField.FieldName};", this.TabSize * 2);
             source.AppendLineWithTabs("}", this.TabSize);

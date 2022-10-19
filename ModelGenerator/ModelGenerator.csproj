@@ -54,6 +54,10 @@
       <Project>{31D047A4-A669-4109-AA11-2C2442A32CBF}</Project>
       <Name>BrainCluster.CommonLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BrainCluster.PocoLibrary\BrainCluster.PocoLibrary.csproj">
+      <Project>{47ECA308-E5D5-4CCA-BAA6-4E8BEDF222A3}</Project>
+      <Name>BrainCluster.PocoLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BrainCluster.PojoLibrary\BrainCluster.PojoLibrary.csproj">
       <Project>{ae872c97-6c37-4ff2-9c45-42b0171c3b88}</Project>
       <Name>BrainCluster.PojoLibrary</Name>
